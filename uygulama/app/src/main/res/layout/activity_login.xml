@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <!-- Arka Plan -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/denemeal" />
+
+    <!-- Blur efekti için transparent view -->
+    <View
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
+    <!-- İçerik -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Başlık -->
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tahlil Analiz"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/poppins_regular" />
+
+            <!-- Giriş Kartı -->
+            <LinearLayout
+                android:id="@+id/loginCardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_rounded_shadow"
+                android:padding="24dp"
+                android:elevation="12dp">
+
+                <!-- E-posta -->
+                <EditText
+                    android:id="@+id/editTextUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="E-posta"
+                    android:textColor="#000000"
+                    android:textColorHint="#444444"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/input_rounded_shadow"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:drawableStart="@drawable/email_24"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Şifre -->
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:hint="Şifre"
+                    android:textColor="#000000"
+                    android:textColorHint="#444444"
+                    android:inputType="textPassword"
+                    android:background="@drawable/input_rounded_shadow"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:drawableStart="@drawable/lock_24"
+                    android:drawablePadding="12dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginBottom="4dp" />
+
+                <!-- Şifremi Unuttum -->
+                <TextView
+                    android:id="@+id/textForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Şifremi Unuttum?"
+                    android:textColor="#2196F3"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:minHeight="48dp"
+                    android:minWidth="48dp"
+                    android:padding="12dp" />
+
+                <!-- Giriş Yap Butonu -->
+                <LinearLayout
+                    android:id="@+id/layoutButtonLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_button_blue_gradient"
+                    android:gravity="center_vertical|start"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="12dp"
+                    android:paddingHorizontal="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_login"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Giriş Yap"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/poppins_regular" />
+                </LinearLayout>
+
+                <!-- Beni Hatırla -->
+                <CheckBox
+                    android:id="@+id/checkBoxRememberMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beni Hatırla"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Ya da Ayracı -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="24dp">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#999999" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ya da"
+                        android:textColor="#999999"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:fontFamily="@font/poppins_regular" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#999999" />
+                </LinearLayout>
+
+                <!-- Kayıt Ol Butonu -->
+                <LinearLayout
+                    android:id="@+id/layoutButtonRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_button_blue_gradient"
+                    android:gravity="center_vertical|start"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="12dp"
+                    android:paddingHorizontal="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_register"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kayıt Ol"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/poppins_regular" />
+                </LinearLayout>
+
+                <!-- Çıkış Yap Butonu -->
+                <LinearLayout
+                    android:id="@+id/layoutButtonLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_button_red_gradient"
+                    android:gravity="center_vertical|start"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginTop="24dp"
+                    android:visibility="visible"
+                    android:paddingHorizontal="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_logout"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Çıkış Yap"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/poppins_regular" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

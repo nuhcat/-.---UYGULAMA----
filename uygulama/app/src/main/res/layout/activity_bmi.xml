@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Arka plan resmi -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avivki" />
+
+    <!-- ScrollView ve içerik -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:id="@+id/containerRoot"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <!-- Başlık -->
+            <TextView
+                android:id="@+id/tvTitleBMI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vücut Kitle İndeksi"
+                android:layout_gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Kilo -->
+            <EditText
+                android:id="@+id/etWeight"
+                android:hint="Kilonuzu girin (kg)"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/input_rounded_shadow"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#000000"
+                android:textColorHint="#666666"
+                android:drawableStart="@drawable/icon_aaa"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/poppins_regular"
+                android:drawableTint="#666666" />
+
+            <!-- Boy -->
+            <EditText
+                android:id="@+id/etHeight"
+                android:hint="Boyunuzu girin (cm)"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/input_rounded_shadow"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#000000"
+                android:textColorHint="#666666"
+                android:drawableStart="@drawable/icon_hee"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/poppins_regular"
+                android:drawableTint="#666666" />
+
+            <!-- VKI Hesapla Butonu -->
+            <LinearLayout
+                android:id="@+id/btnCalculateBMI"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_button_blue_gradient"
+                android:gravity="center_vertical|start"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="16dp"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_login"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VKI Hesapla"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_regular" />
+            </LinearLayout>
+
+            <!-- VKI Sonuç Kartı -->
+            <LinearLayout
+                android:id="@+id/bmiResultContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bmi_result_gradient_green"
+                android:padding="12dp"
+                android:layout_marginBottom="24dp"
+                android:visibility="invisible"
+                android:elevation="4dp">
+
+                <TextView
+                    android:id="@+id/tvBMIScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" VKİ: 23.5"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppins_bold" />
+
+                <TextView
+                    android:id="@+id/tvBMIDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal aralıkta"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+            <!-- Animasyon Alanı -->
+            <FrameLayout
+                android:id="@+id/frameContainer"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAnimationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:lottie_fileName="vki.json"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

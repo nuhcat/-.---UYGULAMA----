@@ -1,0 +1,8 @@
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="2000"
+    android:propertyName="translationX"
+    android:valueFrom="-300"
+    android:valueTo="300"
+    android:repeatCount="infinite"
+    android:repeatMode="restart"
+    android:valueType="floatType" />

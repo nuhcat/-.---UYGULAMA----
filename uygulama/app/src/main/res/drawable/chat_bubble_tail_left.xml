@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="240dp"
+    android:height="160dp"
+    android:viewportWidth="240"
+    android:viewportHeight="160">
+
+    <!-- Bulut ana gövdesi: birkaç yuvarlak birleşimi -->
+    <path
+        android:fillColor="#FF6200EE"
+        android:pathData="
+            M40,80
+            a40,40 0 0,1 80,0
+            a30,30 0 0,1 50,-20
+            a40,40 0 0,1 40,60
+            a30,30 0 0,1 -160,20
+            z" />
+
+    <!-- Kuyruk -->
+    <path
+        android:fillColor="#FF6200EE"
+        android:pathData="M120,140 L170,180 L140,130 Z" />
+
+</vector>

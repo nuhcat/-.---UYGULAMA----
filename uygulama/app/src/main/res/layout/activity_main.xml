@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Arka Plan -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/denemeal"
+        android:alpha="0.85" />
+
+    <!-- Transparan blur view -->
+    <View
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
+    <!-- Scroll ve içerik -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+            <!-- Başlık (isteğe bağlı, kaldırabilirsin) -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tahlil Analiz"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginBottom="8dp" />   <!-- Boşluk 24dp’den 8dp’ye indirildi -->
+
+            <!-- Büyük Card -->
+            <LinearLayout
+                android:id="@+id/mainCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_rounded_shadow"
+                android:clipToPadding="false"
+                android:elevation="12dp"
+                android:orientation="vertical"
+                android:padding="32dp">
+
+                <!-- OCR Butonu -->
+                <LinearLayout
+                    android:id="@+id/buttonOCR"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/rounded_button_blue_gradient"
+                    android:clickable="true"
+                    android:clipToPadding="false"
+                    android:elevation="8dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical|start"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_foto" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Test Yükle"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <!-- Geçmiş Testler Butonu -->
+                <LinearLayout
+                    android:id="@+id/buttonHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/rounded_button_blue_gradient"
+                    android:clickable="true"
+                    android:clipToPadding="false"
+                    android:elevation="8dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical|start"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_ge" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Geçmiş Testlerim"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <!-- Harita Butonu -->
+                <LinearLayout
+                    android:id="@+id/buttonMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/rounded_button_blue_gradient"
+                    android:clickable="true"
+                    android:clipToPadding="false"
+                    android:elevation="8dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical|start"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_konum" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Yakındaki Eczane ve Hastane"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <!-- Hatırlatıcı Butonu -->
+                <LinearLayout
+                    android:id="@+id/buttonReminder"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/rounded_button_blue_gradient"
+                    android:clickable="true"
+                    android:clipToPadding="false"
+                    android:elevation="8dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical|start"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_date" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Hatırlatıcı"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <!-- VKİ Hesapla Butonu -->
+                <LinearLayout
+                    android:id="@+id/buttonBMI"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/rounded_button_blue_gradient"
+                    android:clickable="true"
+                    android:clipToPadding="false"
+                    android:elevation="8dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical|start"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_tar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="VKİ Hesapla"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <!-- Çıkış Butonu -->
+                <LinearLayout
+                    android:id="@+id/buttonLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="48dp"
+                    android:background="@drawable/rounded_button_red_gradient"
+                    android:clickable="true"
+                    android:clipToPadding="false"
+                    android:elevation="8dp"
+                    android:focusable="true"
+                    android:gravity="center_vertical|start"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_logout" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Oturumu kapat"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

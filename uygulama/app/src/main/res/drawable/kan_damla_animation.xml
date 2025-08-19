@@ -1,0 +1,6 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <item android:drawable="@drawable/denemeal" android:duration="100" />
+    <item android:drawable="@drawable/denemeal" android:duration="100" />
+    <item android:drawable="@drawable/denemeal" android:duration="100" />
+    <!-- diğer frame'ler -->
+</animation-list>

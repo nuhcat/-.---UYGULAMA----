@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "299674400688",
+    "project_id": "kantahliliuygulamasi",
+    "storage_bucket": "kantahliliuygulamasi.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299674400688:android:7adc98a43c66bc2e17c875",
+        "android_client_info": {
+          "package_name": "com.example.kantahliliuygulamasi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRPsYJk678JIKFCgUwcrl8_VIubWvECTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

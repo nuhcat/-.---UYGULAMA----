@@ -1,0 +1,12 @@
+<!-- res/drawable/button_selector.xml -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@android:color/transparent">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#5B8CF4" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+
+</ripple>
